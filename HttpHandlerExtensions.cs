@@ -1,6 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 
-namespace refit_log_calls
+namespace RefitLogCalls
 {
     public static class HttpHandlerExtension
     {
@@ -10,8 +10,9 @@ namespace refit_log_calls
             return builder;
         }
 
-        public static IServiceCollection RegisterLogCurl(this IServiceCollection services)
+        public static IServiceCollection RegisterLogCurl(this IServiceCollection services, LogOptions logOptions = null)
         {
+            LogConfiguration.Options = logOptions ?? new LogOptions();
             services.AddTransient<HttpToCurlHandler>();
             return services;
         }

@@ -23,13 +23,23 @@ builder.Services
 Import the namespace, that provides .Log() and RegisterLogCurl() methods
 
 ```c#
+using RefitLogCalls;
+
 builder.Services
     .AddRefitClient<INationalizeApi>()
     .ConfigureHttpClient(c => c.BaseAddress = new Uri("https://api.nationalize.io"))
     .LogCurl();
 
-builder.Services.RegisterLogCurl();       
+builder.Services.RegisterLogCurl(new LogOptions
+{
+    LogMode = LogModeOptions.Both,
+    IncludeLogIds = true,
+    IncludeLogTextSeparators = true,
+});
 ```
+
+The *LogOptions* class provides a way to customize the log generation approach:
+For example, the property *LogMode* which accepts *Request*, *Response* and *Both* values
 
 And that's it, your requests and responses will be logged always your are executing it in debug mode
 
