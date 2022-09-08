@@ -1,4 +1,4 @@
-# refit_log_calls
+# RefitLogCalls
 
 Refit Request Log Curl is a Nuget package that expose a way of log Refit request as a curl
 
@@ -7,7 +7,7 @@ Refit Request Log Curl is a Nuget package that expose a way of log Refit request
 Install it from nuget.org
 
 ```bash
-dotnet add package RefitLogCalls --version 1.0.0
+dotnet add package RefitLogCalls --version 2.0.1
 ```
 
 ## Usage

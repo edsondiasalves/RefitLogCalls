@@ -4,9 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>RefitLogCalls</RootNamespace>
     <PackageId>RefitLogCalls</PackageId>
-    <Version>2.0.0</Version>
+    <Version>2.0.1</Version>
     <Authors>Edson Moisinho</Authors>
     <Company>Edson Moisinho S.A</Company>
+    <RepositoryUrl>https://github.com/edsondiasalves/RefitLogCalls</RepositoryUrl> 
+    <RepositoryType>git</RepositoryType> 
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
